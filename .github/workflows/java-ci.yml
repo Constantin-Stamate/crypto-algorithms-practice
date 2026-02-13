@@ -1,0 +1,41 @@
+name: Java CI
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up JDK 17
+        uses: actions/setup-java@v4
+        with:
+          java-version: '17'
+          distribution: 'temurin'
+
+      - name: Compile project
+        run: |
+          mkdir -p out
+          find src/main/java -name "*.java" > sources.txt
+          javac -d out @sources.txt
+          cp -r src/main/resources/* out/
+
+      - name: Run all cipher demos
+        run: |
+          java -cp out:. org.example.first.laboratory.algorithm.caesar.CaesarCipherDemo
+          java -cp out:. org.example.first.laboratory.algorithm.caesar.CaesarCipherExtendedDemo
+          
+          java -cp out:. org.example.second.laboratory.algorithm.caesar.attack.CaesarCipherAttack
+          java -cp out:. org.example.second.laboratory.algorithm.caesar.attack.ExtendedCaesarCipherAttack
+          
+          java -cp out:. org.example.third.laboratory.algorithm.vigenere.VigenereCipherDemo
+          java -cp out:. org.example.third.laboratory.algorithm.vigenere.VigenereCipherExtendedDemo
+          
+          java -cp out:. org.example.fourth.laboratory.algorithm.rsa.RsaCipherDemo
