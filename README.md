@@ -92,7 +92,7 @@ For guidance and references on cryptography and algorithms, you can check:
 
 ## Author
 
-This analysis was developed as part of the **Declarative Programming Course** organized at **UTM (Technical University of Moldova)**.
+This project was developed as part of the **Information Security Course** at **UTM (Technical University of Moldova)**, where the implemented cryptographic algorithms were studied and applied.
 
 - GitHub: [Constantin-Stamate](https://github.com/Constantin-Stamate)
 - Email: constantinstamate.r@gmail.com
