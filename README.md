@@ -65,11 +65,11 @@ to support **hands-on learning and experimentation in information security**.
 4. **Run all demo classes**
 
 ```bash
-   java -cp out:. org.example.first.laboratory.algorithm.caesar.CaesarCipherDemo
-   java -cp out:. org.example.first.laboratory.algorithm.caesar.CaesarCipherExtendedDemo
+   echo "1" | java -cp out:. org.example.first.laboratory.algorithm.caesar.CaesarCipherDemo
+   echo "1" | java -cp out:. org.example.first.laboratory.algorithm.caesar.CaesarCipherExtendedDemo
           
-   java -cp out:. org.example.second.laboratory.algorithm.caesar.attack.CaesarCipherAttack
-   java -cp out:. org.example.second.laboratory.algorithm.caesar.attack.ExtendedCaesarCipherAttack
+   echo "1" | java -cp out:. org.example.second.laboratory.algorithm.caesar.attack.CaesarCipherAttack
+   echo "1" | java -cp out:. org.example.second.laboratory.algorithm.caesar.attack.ExtendedCaesarCipherAttack
           
    java -cp out:. org.example.third.laboratory.algorithm.vigenere.VigenereCipherDemo
    java -cp out:. org.example.third.laboratory.algorithm.vigenere.VigenereCipherExtendedDemo
